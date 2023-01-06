@@ -1,0 +1,160 @@
+$color-blue--dark: hsl(240, 38%, 20%);
+$color-blue--gray: hsl(240, 18%, 77%);
+
+@import "./reset";
+
+.hidden {
+  display: none !important;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  min-height: 100%;
+  padding: 2em;
+  color: $color-blue--dark;
+  display: grid;
+  place-items: center;
+}
+
+.testimonial {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3em;
+  text-align: center;
+
+  &__img-container {
+    background-image: url(../images/pattern-bg.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 2em;
+    display: grid;
+    place-items: center;
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  &__img {
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 3rem rgba($color-blue--dark, 0.4);
+  }
+
+  &__btns {
+    position: absolute;
+    bottom: 2.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border-radius: 10rem;
+    width: 6rem;
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__quote {
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 1.5em;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -20%;
+      left: 40%;
+      width: 4em;
+      height: 4em;
+      background: url(../images/pattern-quotes.svg) no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  &__user {
+    display: flex;
+    flex-direction: column;
+
+    .user__name {
+      font-weight: 700;
+    }
+
+    .user__role {
+      color: $color-blue--gray;
+    }
+  }
+}
+
+.btn {
+  border: none;
+  background: none;
+}
+
+@media (min-width: 40em) {
+  body {
+    font-size: 2rem;
+  }
+
+  .testimonial {
+    &__img-container {
+      max-width: 560px;
+    }
+
+    &__user {
+      font-size: 1.5rem;
+    }
+
+    &__btns {
+      bottom: 7.5%;
+    }
+  }
+}
+
+@media (min-width: 60em) {
+  body {
+    background: url(../images/pattern-curve.svg) bottom left no-repeat;
+  }
+
+  .testimonial {
+    text-align: left;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0;
+    align-items: center;
+
+    &__img-container {
+      max-width: 100%;
+      grid-column: 2;
+    }
+
+    &__btns {
+      left: 30%;
+    }
+
+    &__textbox {
+      width: 120%;
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    &__quote {
+      margin-bottom: 0.5em;
+
+      &::before {
+        left: 15%;
+      }
+    }
+
+    &__user {
+      flex-direction: row;
+      gap: 1em;
+    }
+  }
+}
