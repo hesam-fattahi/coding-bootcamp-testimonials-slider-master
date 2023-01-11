@@ -22,7 +22,7 @@
   <body>
     <main class="container">
       <h1 class="sr-only">Testimonials</h1>
-      <div class="testimonial">
+      <div class="testimonial" id="testimonial--first">
         <div class="testimonial__img-container">
           <img
             src="./images/image-tanya.jpg"
@@ -30,12 +30,12 @@
             class="testimonial__img"
           />
           <div class="testimonial__btns">
-            <button class="btn btn--prev" aria-label="Previous button">
+            <a class="btn" aria-label="Previous button">
               <img src="./images/icon-prev.svg" alt="" aria-hidden="true" />
-            </button>
-            <button class="btn btn--next" aria-label="Next button">
+            </a>
+            <a href="#testimonial--second" class="btn" aria-label="Next button">
               <img src="./images/icon-next.svg" alt="" aria-hidden="true" />
-            </button>
+            </a>
           </div>
         </div>
         <figure class="testimonial__textbox">
@@ -50,7 +50,7 @@
           </figcaption>
         </figure>
       </div>
-      <div class="testimonial hidden">
+      <div class="testimonial" id="testimonial--second">
         <div class="testimonial__img-container">
           <img
             src="./images/image-john.jpg"
@@ -58,12 +58,16 @@
             class="testimonial__img"
           />
           <div class="testimonial__btns">
-            <button class="btn btn--prev" aria-label="Previous button">
+            <a
+              href="#testimonial--first"
+              class="btn"
+              aria-label="Previous button"
+            >
               <img src="./images/icon-prev.svg" alt="" aria-hidden="true" />
-            </button>
-            <button class="btn btn--next" aria-label="Next button">
+            </a>
+            <a class="btn" aria-label="Next button">
               <img src="./images/icon-next.svg" alt="" aria-hidden="true" />
-            </button>
+            </a>
           </div>
         </div>
         <figure class="testimonial__textbox">
