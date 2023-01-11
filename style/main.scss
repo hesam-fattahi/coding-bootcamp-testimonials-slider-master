@@ -20,10 +20,18 @@ $color-blue--gray: hsl(240, 18%, 77%);
   max-width: 1170px;
   margin: 0 auto;
   min-height: 100%;
-  padding: 2em;
+  padding: 2em 0;
   color: $color-blue--dark;
   display: grid;
+  grid-template-columns: repeat(2, 100%);
   place-items: center;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .testimonial {
@@ -31,6 +39,8 @@ $color-blue--gray: hsl(240, 18%, 77%);
   grid-template-columns: 1fr;
   gap: 3em;
   text-align: center;
+  margin: 0 2em;
+  scroll-snap-align: center;
 
   &__img-container {
     background-image: url(../images/pattern-bg.svg);
@@ -91,11 +101,6 @@ $color-blue--gray: hsl(240, 18%, 77%);
       color: $color-blue--gray;
     }
   }
-}
-
-.btn {
-  border: none;
-  background: none;
 }
 
 @media (min-width: 40em) {
