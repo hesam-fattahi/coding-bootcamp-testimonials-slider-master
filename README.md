@@ -9,7 +9,7 @@ This is a solution to the [Coding bootcamp testimonials slider challenge on Fron
 Users should be able to:
 
 - View the optimal layout for the component depending on their device's screen size
-- Navigate the slider using either their mouse/trackpad or keyboard (This one is not included yet)
+- Navigate the slider using either their mouse/trackpad or keyboard (These features are implemented using only HTML and CSS)
 
 ### Links
 
