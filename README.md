@@ -13,7 +13,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github Repository](https://github.com/hesam-fattahi/coding-bootcamp-testimonials-slider-master)
+- Solution URL: [FEM page](https://www.frontendmentor.io/solutions/coding-bootcamp-testimonials-slider-LwAlK6zRQV)
 - Live Site URL: [Github Page](https://hesam-fattahi.github.io/coding-bootcamp-testimonials-slider-master/)
 
 ### Built with
